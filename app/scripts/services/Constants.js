@@ -213,7 +213,7 @@ function constants(ENV) {
   };
 
   var quorumConstants = {
-  	"mepsEndpoint": "http://quorumnx02.southeastasia.cloudapp.azure.com:9001",
+  	"mepsEndpoint": "192.168.56.4:9001",
   	"bankNodes": {
    //  	"MASREGULATOR": {
    //  		"host": "quorumnx01.southeastasia.cloudapp.azure.com",
@@ -223,84 +223,84 @@ function constants(ENV) {
    //  		"regulator": true
 			// },
 			"MASGSGSG": {
-	    		"host": "quorumnx02.southeastasia.cloudapp.azure.com",
+	    		"host": "192.168.56.4",
 	    		"port": "3000",
 	    		"bankName": "Monetary Authority of Singapore Central Bank",
 	    		"centralBank": true,
 	    		"regulator": false
 	    	},
       "BOFASG2X": {
-      	"host": "quorumnx03.southeastasia.cloudapp.azure.com",
+      	"host": "192.168.56.5",
       	"port": "3000",
       	"bankName": "Bank of America Merrill Lynch",
       	"centralBank": false,
       	"regulator": false
       },
       "CHASSGSG": {
-      	"host": "quorumnx04.southeastasia.cloudapp.azure.com",
+      	"host": "192.168.56.6",
       	"port": "3000",
       	"bankName": "J.P. Morgan Chase",
       	"centralBank": false,
       	"regulator": false
       },
       "CITISGSG": {
-      	"host": "quorumnx05.southeastasia.cloudapp.azure.com",
+      	"host": "192.168.56.7",
       	"port": "3000",
       	"bankName": "Citi",
       	"centralBank": false,
       	"regulator": false
       },
       "CSFBSGSX": {
-      	"host": "quorumnx06.southeastasia.cloudapp.azure.com",
+      	"host": "192.168.56.8",
       	"port": "3000",
       	"bankName": "Credit Suisse",
       	"centralBank": false,
       	"regulator": false
       },
       "DBSSSGSG": {
-      	"host": "quorumnx07.southeastasia.cloudapp.azure.com",
+      	"host": "192.168.56.9",
       	"port": "3000",
       	"bankName": "DBS Bank Ltd",
       	"centralBank": false,
       	"regulator": false
       },
       "HSBCSGSG": {
-      	"host": "quorumnx08.southeastasia.cloudapp.azure.com",
+      	"host": "192.168.56.10",
       	"port": "3000",
       	"bankName": "HSBC Limited",
       	"centralBank": false,
       	"regulator": false
       },
       "MTBCSGSG": {
-      	"host": "quorumnx09.southeastasia.cloudapp.azure.com",
+      	"host": "192.168.56.11",
       	"port": "3000",
       	"bankName": "Mitsubishi UFJ Financial Group, Inc.",
       	"centralBank": false,
       	"regulator": false
       },
       "OCBCSGSG": {
-      	"host": "quorumnx10.southeastasia.cloudapp.azure.com",
+      	"host": "192.168.56.12",
       	"port": "3000",
       	"bankName": "Oversea-Chinese Banking Corporation Ltd",
       	"centralBank": false,
       	"regulator": false
       },
       "SCBLSGSG": {
-      	"host": "quorumnx12.southeastasia.cloudapp.azure.com",
+      	"host": "192.168.56.13",
       	"port": "3000",
       	"bankName": "Standard Chartered Bank",
       	"centralBank": false,
       	"regulator": false
       },
       "UOBVSGSG": {
-      	"host": "quorumnx14.southeastasia.cloudapp.azure.com",
+      	"host": "192.168.56.14",
       	"port": "3000",
       	"bankName": "United Overseas Bank",
       	"centralBank": false,
       	"regulator": false
       },
       "XSIMSGSG": {
-      	"host": "quorumnx15.southeastasia.cloudapp.azure.com",
+      	"host": "192.168.56.15",
       	"port": "3000",
       	"bankName": "Singapore Exchange",
       	"centralBank": false,
