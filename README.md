@@ -11,6 +11,7 @@ Node.js and NPM is required to build the UI. After those are installed, run the 
 ```sh
 npm -g install bower
 npm -g install grunt
+npm -g install http-server
 npm install
 bower install
 ```
@@ -19,51 +20,19 @@ bower install
 
 1. Go to [app/scripts/services/Constants.js](app/scripts/services/Constants.js)
 2. The endpoints for each platform are stored its own variable map.
-    - Corda configuration key: `cordaConstants`
-    - Hyperledger Fabric configuration key: `fabricConstants`
     - Quorum configuration key: `quorumConstants`
-3. Under the specific platform key (e.g. `cordaConstants`), edit the `mepsEndpoint` to point to the URL where [`ubin-ext-service`](https://github.com/project-ubin/ubin-ext-service) has been deployed and run for the environment.
+3. Under the specific platform key (e.g. `quorumConstants`), edit the `mepsEndpoint` to point to the URL where [`ubin-ext-service`](https://github.com/project-ubin/ubin-ext-service) has been deployed and run for the environment.
 4. Under `bankNodes` key, each key (e.g. `MASGSGSG`) represents the BIC of the participating nodes. Edit the `host` and `port` keys accordingly to match the environment nodes.
 
-```js
-	var cordaConstants = {
-		"mepsEndpoint": "<ubin-ext-service URL>",
-		"bankNodes": {
-			"MASGSGSG": {
-				"host": "<host for MASGSGSG node>",
-				"port": "<API port for MASGSGSG node>",
-				"bankName": "Monetary Authority of Singapore Central Bank",
-				"centralBank": true,
-				"regulator": false
-			},
-			"BOFASG2X": {
-				"host": "<host for BOFASG2X node>",
-				"port": "<API port for BOFASG2X node>",
-				"bankName": "Bank of America Merrill Lynch",
-				"centralBank": false,
-				"regulator": false
-			},
-			...
-		}
-	};
-	
-	var fabricConstants = {
-	    ...
-	};
-	
-	var quorumConstants = {
-	    ...
-	};
-```
 
 ## Development mode
-To run a live server, execute `grunt serve:ubin --env=<platform>` where platform can be `corda`, `fabric` and `quorum`.
+To run a live server, execute `grunt serve:ubin --env=quorum`.
 
 ## Deployment
-1. To run in the background, execute the following (platform can be `corda`, `fabric` and `quorum`)
+1. To run in the background, execute the following 
 
 ```sh
-grunt build:ubin --env=<platform>
+grunt build:ubin --env=quorum
 ```
 
 2. Go to the `dist` folder
