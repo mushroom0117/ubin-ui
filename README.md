@@ -6,12 +6,23 @@ The UI is a consolidated UI that allows single page access to all banks and MAS 
 
 ## Prerequisites
 
-Node.js and NPM is required to build the UI. After those are installed, run the following commands:
-
+1. Install Bower
 ```sh
 npm -g install bower
+```
+
+2. Install Grunt
+```sh
 npm -g install grunt
+```
+
+3. Install Http-server
+```sh
 npm -g install http-server
+```
+
+4. Install dependencies
+```sh
 npm install
 bower install
 ```
