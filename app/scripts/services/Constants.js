@@ -4,7 +4,7 @@ function constants(ENV) {
 
 	var constants = {};
 	var quorumConstants = {
-		"mepsEndpoint": "192.168.56.4:9001",
+		"mepsEndpoint": "node9.puyuma.org:10091",
 		"bankNodes": {
 			//  	"MASREGULATOR": {
 			//  		"host": "quorumnx01.southeastasia.cloudapp.azure.com",
