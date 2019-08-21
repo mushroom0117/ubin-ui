@@ -1,6 +1,6 @@
 'use strict';
 
-module.exports = function(grunt) {
+module.exports = function (grunt) {
 
     require('time-grunt')(grunt);
     var proxy = require('http-proxy-middleware');
@@ -74,7 +74,7 @@ module.exports = function(grunt) {
             livereload: {
                 options: {
                     open: true,
-                    middleware: function(connect) {
+                    middleware: function (connect) {
                         return [
                             connect.static('data'),
                             connect.static('.tmp'),
@@ -123,33 +123,33 @@ module.exports = function(grunt) {
 
         // Empties folders to start fresh
         clean: {
-          dist: {
-            files: [{
-              dot: true,
-              src: [
-                '.tmp',
-                '<%= ubin.dist %>/<%= ubin.modules %>',
-                '!<%= ubin.dist %>/<%= ubin.modules %>/.git{,*/}*'
-              ]
-            }]
-          },
-	        server: {
-	        	files: [{
-	            dot: true,
-	            src: [
-	          		'.tmp',
-	          		'.sass-cache'
-	            ]
-	          }]
-	        },
-	        main: {
-            files: [{
-              dot: true,
-              src: [
-              	'<%= ubin.dist %>/main'
-              ]
-            }]
-	        }
+            dist: {
+                files: [{
+                    dot: true,
+                    src: [
+                        '.tmp',
+                        '<%= ubin.dist %>/<%= ubin.modules %>',
+                        '!<%= ubin.dist %>/<%= ubin.modules %>/.git{,*/}*'
+                    ]
+                }]
+            },
+            server: {
+                files: [{
+                    dot: true,
+                    src: [
+                        '.tmp',
+                        '.sass-cache'
+                    ]
+                }]
+            },
+            main: {
+                files: [{
+                    dot: true,
+                    src: [
+                        '<%= ubin.dist %>/main'
+                    ]
+                }]
+            }
         },
 
         // Add vendor prefixed styles
@@ -214,20 +214,20 @@ module.exports = function(grunt) {
 
         // Compiles Sass to CSS and generates necessary files if requested
         sass: {
-        	dist: {
-        		files: {
-        			'.tmp/styles/main.css': '<%= ubin.app %>/styles/main.scss'
-        		}
-        	},
-        	server: {
-        		options: {
-        			sourcemap: true
+            dist: {
+                files: {
+                    '.tmp/styles/main.css': '<%= ubin.app %>/styles/main.scss'
+                }
             },
-            files: {
-        			'.tmp/styles/main.css': '<%= ubin.app %>/styles/main.scss'
-        		}
-        	}
-		    },
+            server: {
+                options: {
+                    sourcemap: true
+                },
+                files: {
+                    '.tmp/styles/main.css': '<%= ubin.app %>/styles/main.scss'
+                }
+            }
+        },
         useminPrepare: {
             html: '<%= ubin.app %>/index.html',
             options: {
@@ -339,7 +339,7 @@ module.exports = function(grunt) {
                     dest: '<%= ubin.dist %>/img',
                     src: ['generated/*']
                 }, {
-                		expand: true,
+                    expand: true,
                     cwd: 'bower_components/components-font-awesome',
                     dest: '<%= ubin.dist %>',
                     src: ['fonts/*']
@@ -355,7 +355,7 @@ module.exports = function(grunt) {
         injector: {
             options: {
                 // Task-specific options go here.
-                transform: function(filepath) {
+                transform: function (filepath) {
                     var path = require('path');
                     var tempPath = filepath.replace('/.tmp/', '');
 
@@ -446,7 +446,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-scss-lint');
     var env = grunt.option('env') || 'test';
 
-    grunt.registerTask('serve', 'Compile then start a connect web server', function(module, target) {
+    grunt.registerTask('serve', 'Compile then start a connect web server', function (module, target) {
 
         var param = grunt.option('env');
         console.log('env -> ', env);
@@ -464,7 +464,7 @@ module.exports = function(grunt) {
         ]);
     });
 
-    grunt.registerTask('build', 'Prepares a distribution package', function(module) {
+    grunt.registerTask('build', 'Prepares a distribution package', function (module) {
 
         //grunt.config.set('pii.modules', module);
 
